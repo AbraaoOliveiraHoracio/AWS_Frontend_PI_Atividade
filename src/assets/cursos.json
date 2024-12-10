@@ -1,0 +1,56 @@
+[
+  {
+    "curso": "Desenvolvimento Web",
+    "semestre": "1º Semestre",
+    "dias": {
+      "segunda": [
+        { "materia": "ISSO", "aula": "Aula 1", "horario": "13:20 - 14:10" },
+        { "materia": "ISSO", "aula": "Aula 2", "horario": "14:10 - 15:00" },
+        { "materia": "Marketing", "aula": "Aula 1", "horario": "15:00 - 15:50" },
+        { "materia": "Gestão de Pessoas", "aula": "Aula 1", "horario": "15:50 - 16:40" },
+        { "materia": "Statistics", "aula": "Aula 1", "horario": "16:40 - 17:30" },
+        { "materia": "Statistics", "aula": "Aula 2", "horario": "17:30 - 18:20" }
+      ],
+      "terca": [
+        { "materia": "Introdução à Administração", "aula": "Aula 1", "horario": "13:20 - 14:10" },
+        { "materia": "Contabilidade Básica", "aula": "Aula 1", "horario": "14:10 - 15:00" },
+        { "materia": "Marketing", "aula": "Aula 1", "horario": "15:00 - 15:50" },
+        { "materia": "Gestão de Pessoas", "aula": "Aula 1", "horario": "15:50 - 16:40" },
+        { "materia": "Statistics", "aula": "Aula 1", "horario": "16:40 - 17:30" },
+        { "materia": "Statistics", "aula": "Aula 2", "horario": "17:30 - 18:20" }
+      ],
+      "quarta": [
+        { "materia": "Introdução à Administração", "aula": "Aula 1", "horario": "13:20 - 14:10" },
+        { "materia": "Contabilidade Básica", "aula": "Aula 1", "horario": "14:10 - 15:00" },
+        { "materia": "Marketing", "aula": "Aula 1", "horario": "15:00 - 15:50" },
+        { "materia": "Gestão de Pessoas", "aula": "Aula 1", "horario": "15:50 - 16:40" },
+        { "materia": "Statistics", "aula": "Aula 1", "horario": "16:40 - 17:30" },
+        { "materia": "Statistics", "aula": "Aula 2", "horario": "17:30 - 18:20" }
+      ],
+      "quinta": [
+        { "materia": "Introdução à Administração", "aula": "Aula 1", "horario": "13:20 - 14:10" },
+        { "materia": "Contabilidade Básica", "aula": "Aula 1", "horario": "14:10 - 15:00" },
+        { "materia": "Marketing", "aula": "Aula 1", "horario": "15:00 - 15:50" },
+        { "materia": "Gestão de Pessoas", "aula": "Aula 1", "horario": "15:50 - 16:40" },
+        { "materia": "Statistics", "aula": "Aula 1", "horario": "16:40 - 17:30" },
+        { "materia": "Statistics", "aula": "Aula 2", "horario": "17:30 - 18:20" }
+      ],
+      "sexta": [
+        { "materia": "Introdução à Administração", "aula": "Aula 1", "horario": "13:20 - 14:10" },
+        { "materia": "Contabilidade Básica", "aula": "Aula 1", "horario": "14:10 - 15:00" },
+        { "materia": "Marketing", "aula": "Aula 1", "horario": "15:00 - 15:50" },
+        { "materia": "Gestão de Pessoas", "aula": "Aula 1", "horario": "15:50 - 16:40" },
+        { "materia": "Statistics", "aula": "Aula 1", "horario": "16:40 - 17:30" },
+        { "materia": "Statistics", "aula": "Aula 2", "horario": "17:30 - 18:20" }
+      ],
+      "sabado": [
+        { "materia": "Introdução à Administração", "aula": "Aula 1", "horario": "13:20 - 14:10" },
+        { "materia": "Contabilidade Básica", "aula": "Aula 1", "horario": "14:10 - 15:00" },
+        { "materia": "Marketing", "aula": "Aula 1", "horario": "15:00 - 15:50" },
+        { "materia": "Gestão de Pessoas", "aula": "Aula 1", "horario": "15:50 - 16:40" },
+        { "materia": "Statistics", "aula": "Aula 1", "horario": "16:40 - 17:30" },
+        { "materia": "Statistics", "aula": "Aula 2", "horario": "17:30 - 18:20" }
+      ]
+    }
+  }
+]

@@ -1,0 +1,77 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div *ngIf="mensagemSucesso" class="alert alert-success">
+        Sala atualizada com sucesso!
+      </div>
+      <div class="card register">
+        <div class="card-body">
+          <h5 class="card-title text-center">Edição de Sala</h5>
+          <form [formGroup]="salaForm" (ngSubmit)="salvar()">
+            <div class="form-group">
+              <label for="roomId">ID</label>
+              <input id="roomId" class="form-control" formControlName="roomId" readonly>
+            </div>
+            <div class="mb-3 mt-3">
+              <label for="roomType" class="form-label">Tipo de Sala</label>
+              <select class="form-control" id="roomType" formControlName="roomType">
+                <option value="" disabled>Selecione o tipo de sala</option>
+                <option value="1">Sala</option>
+                <option value="2">Laboratório</option>
+              </select>
+              <div *ngIf="f['roomType'].touched && f['roomType'].invalid" class="text-danger">
+                <small *ngIf="f['roomType'].errors?.['required']">Tipo de sala é obrigatório.</small>
+              </div>
+            </div>
+            <div class="form-group mb-3 mt-3">
+              <label for="roomCapacity">Capacidade</label>
+              <input id="roomCapacity" class="form-control" formControlName="roomCapacity">
+              <div *ngIf="f['roomCapacity'].touched && f['roomCapacity'].invalid" class="text-danger">
+                <small *ngIf="f['roomCapacity'].errors?.['required']">Capacidade é obrigatória.</small>
+                <small *ngIf="f['roomCapacity'].errors?.['min']">Capacidade deve ser um número positivo.</small>
+              </div>
+            </div>
+            <div class="form-group mb-3 mt-3">
+              <label for="roomFloor">Andar</label>
+              <input id="roomFloor" class="form-control" formControlName="roomFloor">
+              <div *ngIf="f['roomFloor'].touched && f['roomFloor'].invalid" class="text-danger">
+                <small *ngIf="f['roomFloor'].errors?.['required']">Andar é obrigatório.</small>
+                <small *ngIf="f['roomFloor'].errors?.['min']">Andar deve ser um número não-negativo.</small>
+              </div>
+            </div>
+            <div class="mb-3 mt-3">
+              <label class="form-label">Recursos</label>
+              <div class="d-flex flex-wrap">
+                <div class="form-check me-3" *ngFor="let recurso of todosRecursos">
+                  <input class="form-check-input" type="checkbox" [checked]="isRecursoSelecionado(recurso)" (change)="onResourceChange($event, recurso)">
+                  <label class="form-check-label">{{ recurso }}</label>
+                </div>
+              </div>
+              <div *ngIf="f['roomResources'].touched && f['roomResources'].invalid" class="text-danger">
+                <small *ngIf="f['roomResources'].errors?.['required']">Pelo menos um recurso deve ser selecionado.</small>
+              </div>
+            </div>
+            <div class="mb-3 mt-3">
+              <label for="roomAvailability" class="form-label">Disponibilidade Da Sala</label>
+              <select class="form-control" id="roomAvailability" formControlName="roomAvailability">
+                <option value="" disabled>Selecione a disponibilidade da sala</option>
+                <option value="L">Livre</option>
+                <option value="Indisponível">Indisponível</option>
+              </select>
+              <div *ngIf="f['roomAvailability'].touched && f['roomAvailability'].invalid" class="text-danger">
+                <small *ngIf="f['roomAvailability'].errors?.['required']">Disponibilidade é obrigatória.</small>
+              </div>
+            </div>
+            <div *ngIf="registerError" class="alert alert-danger mt-3" role="alert">
+              Erro ao atualizar a sala!
+            </div>
+            <div class="d-grid gap-2 mt-4 mb-3">
+              <button type="submit" class="btn btn-verde texto-branco">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

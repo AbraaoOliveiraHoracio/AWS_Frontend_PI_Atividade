@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 bg-light">
+      <!-- Barra de pesquisa e filtro -->
+      <div class="search-bar mt-5">
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Pesquisar por professor ou curso" class="form-control">
+      </div>
+
+   
+
+      <!-- Lista de reservas -->
+      <div class="outer-square">
+        <div class="reservations">
+          <div *ngFor="let reservation of filteredReservations" class="reservation-item" (click)="editReservation(reservation)">
+            <span class="reservation-date">{{ reservation.date }}</span>
+            <span class="separator"></span>
+            <div class="reservation-details">
+              <div class="reservation-name">{{ reservation.teacher }} - {{ reservation.course }}</div>
+              <div class="reservation-time">{{ reservation.time }}</div>
+            </div>
+             <button type="button" class="btn-delete" (click)="deleteReservation(reservation.reservationId)">Excluir</button>
+          </div>
+        </div>   <!-- Botão para ir à tela de cadastro -->
+      <div class="d-flex justify-content-end mt-2 mb-2">
+        <button class="btn btn-primary" routerLink="/admin/teste">Cadastrar Nova Reserva</button>
+      </div>
+      </div>
+    </div>
+
+    <!-- Detalhes da reserva -->
+    <div class="col-md-6 bg-secondary">
+      <div *ngIf="isEditing" class="reservation-detail">
+        <h4>Detalhes da Reserva</h4>
+        <div>
+          <p><strong>Professor:</strong> {{ form.teacher}}</p>
+          <p><strong>Curso:</strong> {{ form.course }}</p>
+          <p><strong>Horário:</strong> {{ form.time }}</p>
+          <p><strong>Sala:</strong> {{ form.room }}</p>
+          <p><strong>Data:</strong> {{ form.date }}</p>
+        </div>
+        <div class="action-buttons">
+         
+
+          <button type="button" class="btn-delete" (click)="cancel()">Fechar</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

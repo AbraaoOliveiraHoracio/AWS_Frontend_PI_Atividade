@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class="card register">
+        <div class="card-body">
+          <h5 class="card-title text-center">Registro de Disciplina</h5>
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3 mt-3">
+              <label for="subjectName" class="form-label">Nome da Disciplina</label>
+              <input type="text" class="form-control" id="subjectName" formControlName="subjectName"
+                placeholder="Insira o nome da disciplina" required>
+              <div *ngIf="f['subjectName'].touched && f['subjectName'].invalid" class="text-danger">
+                <small *ngIf="f['subjectName'].errors?.['required']">Nome da disciplina é obrigatório.</small>
+                <small *ngIf="f['subjectName'].errors?.['pattern']">Nome da disciplina deve conter apenas letras e espaços.</small>
+              </div>
+            </div>
+
+            <div class="mb-3 mt-3">
+              <label for="subjectHours" class="form-label">Carga Horária</label>
+              <input type="text" class="form-control" id="subjectHours" formControlName="subjectHours"
+                placeholder="Insira a carga horária" required>
+              <div *ngIf="f['subjectHours'].touched && f['subjectHours'].invalid" class="text-danger">
+                <small *ngIf="f['subjectHours'].errors?.['required']">Carga horária é obrigatória.</small>
+                <small *ngIf="f['subjectHours'].errors?.['pattern']">Carga horária deve ser um número positivo.</small>
+              </div>
+            </div>
+
+            <div *ngIf="registerError" class="alert alert-danger mt-3" role="alert">
+              Erro ao registrar a disciplina!
+            </div>
+            <div *ngIf="registerSuccess" class="alert alert-success mt-3" role="alert">
+              Disciplina registrada com sucesso!
+            </div>
+            <div class="d-grid gap-2 mt-4 mb-3">
+              <button type="submit" class="btn btn-verde texto-branco">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

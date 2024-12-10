@@ -1,0 +1,78 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class="card register">
+        <div class="card-body">
+          <h5 class="card-title text-center">Registro de Curso</h5>
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3 mt-3">
+              <label for="courseName" class="form-label">Nome do Curso</label>
+              <input type="text" class="form-control" id="courseName" formControlName="courseName" placeholder="Nome do Curso">
+              <div *ngIf="f['courseName'].touched && f['courseName'].invalid" class="text-danger">
+                <small *ngIf="f['courseName'].errors?.['required']">Nome do curso é obrigatório.</small>
+                <small *ngIf="f['courseName'].errors?.['pattern']">Nome do curso deve conter apenas letras e espaços.</small>
+              </div>
+            </div>
+
+            <div class="mb-3 mt-3">
+              <label for="courseSemester" class="form-label">Semestre</label>
+              <input type="text" class="form-control" id="courseSemester" formControlName="courseSemester" placeholder="Semestre (Ex: 1° Semestre)">
+              <div *ngIf="f['courseSemester'].touched && f['courseSemester'].invalid" class="text-danger">
+                <small *ngIf="f['courseSemester'].errors?.['required']">Semestre é obrigatório.</small>
+              </div>
+            </div>
+
+            <div class="mb-3 mt-3">
+              <label for="coursePeriod" class="form-label">Período</label>
+              <select class="form-control" id="coursePeriod" formControlName="coursePeriod">
+                <option value="" disabled>Selecione o período</option>
+                <option value="Manha">Manhã</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noite">Noite</option>
+              </select>
+              <div *ngIf="f['coursePeriod'].touched && f['coursePeriod'].invalid" class="text-danger">
+                <small *ngIf="f['coursePeriod'].errors?.['required']">Período é obrigatório.</small>
+              </div>
+            </div>
+
+            <!-- Botão para abrir o menu de seleção de disciplinas -->
+            <div class="mb-3 mt-3">
+              <label for="courseSubjects" class="form-label">Matérias</label>
+              <button type="button" class="btn btn-secondary" (click)="toggleDisciplineSelection()">
+                Selecionar Disciplinas
+              </button>
+            </div>
+
+            <!-- Menu de seleção de disciplinas (Modal/Overlay) -->
+            <div *ngIf="disciplineSelectionOpen" class="discipline-overlay" (click)="toggleDisciplineSelection()">
+              <div class="discipline-menu" (click)="$event.stopPropagation()">
+                <h5 class="text-center">Selecione as Disciplinas</h5>
+                <div *ngFor="let discipline of disciplines">
+                  <label>
+                    <input type="checkbox" [value]="discipline.subjectId" (change)="onDisciplineChange($event)">
+                    {{ discipline.subjectName }}
+                  </label>
+                </div>
+                <div class="text-center mt-3">
+                  <button class="btn btn-secondary" (click)="toggleDisciplineSelection()">Fechar</button>
+                  <button class="btn btn-primary" (click)="confirmDisciplineSelection()">Confirmar</button>
+                </div>
+              </div>
+            </div>
+
+            <div *ngIf="registerError" class="alert alert-danger mt-3" role="alert">
+              Erro ao registrar o curso!
+            </div>
+            <div *ngIf="registerSuccess" class="alert alert-success mt-3" role="alert">
+              Curso registrado com sucesso!
+            </div>
+            <div class="d-grid gap-2 mt-4 mb-3">
+              <button type="submit" class="btn btn-verde texto-branco">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
