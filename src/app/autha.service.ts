@@ -15,7 +15,6 @@ export class AuthaService {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post<any>(this.apiUrl, payload, { headers });
   }
-
   // Método para armazenar o token no localStorage após o login
   storeToken(token: string): void {
     localStorage.setItem('adminToken', token);
