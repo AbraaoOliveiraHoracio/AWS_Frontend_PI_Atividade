@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthaService {
-  private apiUrl = 'https://ppintregador.duckdns.org/admin/auth';
+  private apiUrl = 'https://api.ppintregador.duckdns.org/admin/auth';
 
   constructor(private http: HttpClient) {}
 

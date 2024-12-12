@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PerfilService {
-  private apiUrl = 'https://ppintregador.duckdns.org/teacher/';
+  private apiUrl = 'https://api.ppintregador.duckdns.org/teacher/';
 
   constructor(private http: HttpClient) {}
 

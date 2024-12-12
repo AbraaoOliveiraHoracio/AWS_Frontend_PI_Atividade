@@ -6,12 +6,12 @@
     providedIn: 'root',
   })
   export class GhorarioService {
-    private apiUrl = 'https://ppintregador.duckdns.org/reservation/';
-    private teachersUrl = 'https://ppintregador.duckdns.org/teacher/';
-    private subjectsUrl = 'https://ppintregador.duckdns.org/subject/';
-    private timesUrl = 'https://ppintregador.duckdns.org/time/';
-    private roomsUrl = 'https://ppintregador.duckdns.org/rooms/';
-    private coursesUrl = 'https://ppintregador.duckdns.org/course/';
+    private apiUrl = 'https://api.ppintregador.duckdns.org/reservation/';
+    private teachersUrl = 'https://api.ppintregador.duckdns.org/teacher/';
+    private subjectsUrl = 'https://api.ppintregador.duckdns.org/subject/';
+    private timesUrl = 'https://api.ppintregador.duckdns.org/time/';
+    private roomsUrl = 'https://api.ppintregador.duckdns.org/rooms/';
+    private coursesUrl = 'https://api.ppintregador.duckdns.org/course/';
 
     constructor(private http: HttpClient) {}
 

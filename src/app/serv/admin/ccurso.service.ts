@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CcursoService {
-  private apiUrl = 'https://ppintregador.duckdns.org/course/';  // URL principal para cursos
-  private disciplinesUrl = 'https://ppintregador.duckdns.org/subject/';  // URL para buscar as disciplinas
+  private apiUrl = 'https://api.ppintregador.duckdns.org/course/';  // URL principal para cursos
+  private disciplinesUrl = 'https://api.ppintregador.duckdns.org/subject/';  // URL para buscar as disciplinas
 
   constructor(private http: HttpClient) { }
 
