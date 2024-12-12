@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CsalasService {
-  private apiUrl = 'http://54.226.193.29:8080/rooms/';
+  private apiUrl = 'https://ppintregador.duckdns.org/rooms/';
 
   constructor(private http: HttpClient) { }
 

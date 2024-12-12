@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProfessoresService {
-  private apiUrl = 'http://54.226.193.29:8080/teacher/';  // Nova URL da API
-  private cursosUrl = 'http://54.226.193.29:8080/courses'; // Caso precise acessar cursos também
+  private apiUrl = 'https://ppintregador.duckdns.org/teacher/';  // Nova URL da API
+  private cursosUrl = 'https://ppintregador.duckdns.org/courses'; // Caso precise acessar cursos também
 
   constructor(private http: HttpClient) { }
 

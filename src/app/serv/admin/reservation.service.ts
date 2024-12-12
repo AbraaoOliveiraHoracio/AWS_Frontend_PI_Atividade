@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ReservationService {
-  private jsonUrl = 'http://54.226.193.29:8080/reservation/'; 
+  private jsonUrl = 'https://ppintregador.duckdns.org/reservation/'; 
 
   constructor(private http: HttpClient) { }
 
