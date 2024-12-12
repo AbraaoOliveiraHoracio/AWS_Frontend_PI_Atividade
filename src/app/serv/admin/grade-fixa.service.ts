@@ -6,12 +6,12 @@ import { Observable, catchError, throwError, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class GradeFixaService {
-  private apiUrl = 'https://54.226.193.29:8080/reservation/';
-  private teachersUrl = 'https://54.226.193.29:8080/teacher/';
-  private subjectsUrl = 'https://54.226.193.29:8080/subject/';
-  private timesUrl = 'https://54.226.193.29:8080/time/';
-  private roomsUrl = 'https://54.226.193.29:8080/rooms/';
-  private coursesUrl = 'https://54.226.193.29:8080/course/';
+  private apiUrl = 'http://54.226.193.29:8080/reservation/';
+  private teachersUrl = 'http://54.226.193.29:8080/teacher/';
+  private subjectsUrl = 'http://54.226.193.29:8080/subject/';
+  private timesUrl = 'http://54.226.193.29:8080/time/';
+  private roomsUrl = 'http://54.226.193.29:8080/rooms/';
+  private coursesUrl = 'http://54.226.193.29:8080/course/';
 
   constructor(private http: HttpClient) {}
 

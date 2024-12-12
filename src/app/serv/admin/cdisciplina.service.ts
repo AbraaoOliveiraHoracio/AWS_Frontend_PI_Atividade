@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CdisciplinaService {
-  private apiUrl = 'https://54.226.193.29:8080/subject/';
+  private apiUrl = 'http://54.226.193.29:8080/subject/';
 
   constructor(private http: HttpClient) {}
 
