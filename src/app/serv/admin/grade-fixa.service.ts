@@ -6,12 +6,12 @@ import { Observable, catchError, throwError, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class GradeFixaService {
-  private apiUrl = 'https://api.projetointregadoratividade.duckdns.org/reservation/';
-  private teachersUrl = 'https://api.projetointregadoratividade.duckdns.org/teacher/';
-  private subjectsUrl = 'https://api.projetointregadoratividade.duckdns.org/subject/';
-  private timesUrl = 'https://api.projetointregadoratividade.duckdns.org/time/';
-  private roomsUrl = 'https://api.projetointregadoratividade.duckdns.org/rooms/';
-  private coursesUrl = 'https://api.projetointregadoratividade.duckdns.org/course/';
+  private apiUrl = 'https://54.226.193.29:8080/reservation/';
+  private teachersUrl = 'https://54.226.193.29:8080/teacher/';
+  private subjectsUrl = 'https://54.226.193.29:8080/subject/';
+  private timesUrl = 'https://54.226.193.29:8080/time/';
+  private roomsUrl = 'https://54.226.193.29:8080/rooms/';
+  private coursesUrl = 'https://54.226.193.29:8080/course/';
 
   constructor(private http: HttpClient) {}
 

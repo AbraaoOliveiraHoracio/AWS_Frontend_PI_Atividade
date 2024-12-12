@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PerfilService {
-  private apiUrl = 'https://api.projetointregadoratividade.duckdns.org/teacher/';
+  private apiUrl = 'https://54.226.193.29:8080/teacher/';
 
   constructor(private http: HttpClient) {}
 
