@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthpService {
-  private apiUrl = 'https://54.226.193.29:8080/teacher/auth';
+  private apiUrl = 'http://54.226.193.29:8080/teacher/auth';
 
   constructor(private http: HttpClient) {}
 
